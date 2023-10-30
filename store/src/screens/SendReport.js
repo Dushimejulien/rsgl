@@ -160,7 +160,7 @@ export default function SendReport() {
         }
       );
 
-      dispatch({ type: "CREATE_SUCCESS" });
+      dispatch({ type: "CREATE_SUCCESS",payload:data });
       localStorage.removeItem("cartItems");
       navigate(`/`);
     } catch (error) {

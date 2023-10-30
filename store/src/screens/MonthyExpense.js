@@ -23,18 +23,18 @@ const ExpensesByMonth = () => {
     fetchExpensesByMonth();
   }, []);
 
-  const handleDeleteExpense = async (expenseId) => {
-    if (window.confirm('Are you sure to delete')) {
-      try {
-        await axios.delete(`/api/expense/${expenseId}`);
-        console.log('Expense deleted');
-        // After deleting, you may want to refresh the list of expenses or update the state to remove the deleted expense.
-        setExpenses((prevExpenses) => prevExpenses.filter((expense) => expense._id !== expenseId));
-      } catch (error) {
-        console.error(error);
-      }
-    }
-  };
+  // const handleDeleteExpense = async (expenseId) => {
+  //   if (window.confirm('Are you sure to delete')) {
+  //     try {
+  //       await axios.delete(`/api/expense/${expenseId}`);
+  //       console.log('Expense deleted');
+  //       // After deleting, you may want to refresh the list of expenses or update the state to remove the deleted expense.
+  //       setExpenses((prevExpenses) => prevExpenses.filter((expense) => expense._id !== expenseId));
+  //     } catch (error) {
+  //       console.error(error);
+  //     }
+  //   }
+  // };
 
   return (
     <div>

@@ -11,7 +11,6 @@ import {
   Row,
 } from 'react-bootstrap';
 import { Link, useNavigate, useParams } from 'react-router-dom';
-import { toast } from 'react-toastify';
 import { getError } from '../utils';
 import { Store } from '../Store';
 import MessageBox from './MessageBox';
