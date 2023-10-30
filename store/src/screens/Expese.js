@@ -1,7 +1,6 @@
 import axios from "axios";
 import React, { useContext, useState } from "react";
 import Button from "react-bootstrap/Button";
-import InputGroup from "react-bootstrap/InputGroup";
 import Form from "react-bootstrap/Form";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
@@ -13,7 +12,7 @@ export default function Expense() {
   const [amount, setAmount] = useState("");
   const navigate = useNavigate();
 
-  const { state, dispatch: ctxDispatch } = useContext(Store);
+  const {  dispatch: ctxDispatch } = useContext(Store);
 
   const submitHandler = async (e) => {
     e.preventDefault();

@@ -44,7 +44,7 @@ function SearchDeptbox() {
   const { id: reportId } = params;
   const navigate = useNavigate();
 
-  const [{ report, loadingUpdate }, dispatch] = useReducer(reducer, {
+  const [{ report }, dispatch] = useReducer(reducer, {
     loading: true,
     report: {},
     error: '',
@@ -75,27 +75,27 @@ function SearchDeptbox() {
     navigate('/admin/report');
   };
 
-  const submitHandler = async (e, reportId) => {
-    e.preventDefault();
-    try {
-      dispatch({ type: 'UPDATE_REQUEST' });
-      await axios.put(
-        `/api/report/${reportId}`,
-        {
-          ...report,
-        },
-        {
-          headers: { Authorization: `Bearer ${userInfo.token}` },
-        }
-      );
-      dispatch({ type: 'UPDATE_SUCCESS' });
-      toast.success('Debts paid');
-      navigate('/admin/report');
-    } catch (err) {
-      toast.error(getError(err));
-      dispatch({ type: 'UPDATE_FAIL' });
-    }
-  };
+  // const submitHandler = async (e, reportId) => {
+  //   e.preventDefault();
+  //   try {
+  //     dispatch({ type: 'UPDATE_REQUEST' });
+  //     await axios.put(
+  //       `/api/report/${reportId}`,
+  //       {
+  //         ...report,
+  //       },
+  //       {
+  //         headers: { Authorization: `Bearer ${userInfo.token}` },
+  //       }
+  //     );
+  //     dispatch({ type: 'UPDATE_SUCCESS' });
+  //     toast.success('Debts paid');
+  //     navigate('/admin/report');
+  //   } catch (err) {
+  //     toast.error(getError(err));
+  //     dispatch({ type: 'UPDATE_FAIL' });
+  //   }
+  // };
 
   const [searchResult, setSearchResult] = useState([]);
   const [key, setKey] = useState('');

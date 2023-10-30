@@ -63,11 +63,11 @@ export default function ProductListScreen() {
   const sp = new URLSearchParams(search);
   const page = sp.get("page") || 1;
 
-  const { state, dispatch: ctxDispatch } = useContext(Store);
+  const { state,  } = useContext(Store);
 
   const {
     userInfo,
-    cart: { cartItems },
+   
   } = state;
 
   useEffect(() => {

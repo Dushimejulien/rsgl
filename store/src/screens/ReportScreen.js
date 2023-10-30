@@ -43,7 +43,7 @@ export default function ReportScreen() {
   const { id: reportId } = params;
   const navigate = useNavigate();
 
-  const [{ report, loadingUpdate }, dispatch] = useReducer(reducer, {
+  const [{ report }, dispatch] = useReducer(reducer, {
     loading: true,
     report: {},
     error: "",
@@ -72,9 +72,7 @@ export default function ReportScreen() {
   const navigateButton = () => {
     navigate("/admin/report");
   };
-  const navigateUpdate = () => {
-    navigate(`/update/${report._id}`);
-  };
+  
 
   const submitHandler = async (e) => {
     e.preventDefault();

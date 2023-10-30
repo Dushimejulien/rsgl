@@ -1,5 +1,5 @@
 import axios from "axios";
-import React, { useContext, useEffect, useReducer, useState } from "react";
+import React, { useContext, useEffect,  useState } from "react";
 import { Store } from "../Store";
 import { toast } from "react-toastify";
 import { getError } from "../utils";

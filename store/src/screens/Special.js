@@ -46,7 +46,7 @@ export default function Special() {
 
   const { state } = useContext(Store);
   const { userInfo } = state;
-  const [{ error, loadingUpdate, loadingUpload }, dispatch] = useReducer(
+  const [{  loadingUpdate, loadingUpload }, dispatch] = useReducer(
     reducer,
     {
       loading: true,

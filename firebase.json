@@ -1,5 +1,6 @@
 {
   "hosting": {
+    "site": "rightlamp-20aaf",
     "public": "store/build",
     "ignore": [
       "firebase.json",

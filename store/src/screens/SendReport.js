@@ -50,11 +50,11 @@ export default function SendReport() {
     loading: false,
   });
   const navigate = useNavigate();
-  const { state, dispatch: ctxDispatch } = useContext(Store);
+  const { state  } = useContext(Store);
   const { cart, userInfo } = state;
   
 
-  const [countInStock, setCountInStock] = useState(
+  const [countInStock, ] = useState(
     cart.cartItems[0].countInStock - cart.report.real
   );
 

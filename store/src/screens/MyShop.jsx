@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Table, Container, Row, Col, Card } from 'react-bootstrap';
+import {  Container, Row, Col, Card } from 'react-bootstrap';
 import { Helmet } from 'react-helmet-async';
 
 const MyShop = () => {

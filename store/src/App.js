@@ -44,7 +44,6 @@ import SeeReport from './screens/SeeReport';
 import Special from './screens/Special';
 import GetSpecial from './screens/GetSpecial';
 import SearchForm from './screens/SearchDept';
-import UpdateReportModal from './screens/UpdateReport';
 import MyShop from './screens/MyShop';
 import ExpensesByMonth from './screens/MonthyExpense';
 
